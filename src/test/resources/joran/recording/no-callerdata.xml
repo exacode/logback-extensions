@@ -11,7 +11,7 @@
 	</appender>
 
 	<appender name="REC"
-		class="net.exacode.logback.ext.recording.RecordingAppender">
+		class="net.exacode.logback.classic.recording.RecordingAppender">
 
 		<appender-ref ref="LIST" />
 		<appender-ref ref="STDOUT" />

@@ -24,7 +24,7 @@ See full [RecordingAppender Configuration](/src/test/resources/joran/recording/a
 		</encoder>
 	</appender>
 
-	<appender name="REC" class="net.exacode.logback.ext.recording.RecordingAppender">
+	<appender name="REC" class="net.exacode.logback.classic.recording.RecordingAppender">
 		<appender-ref ref="STDOUT" />
 
 		<maxEvents>10</maxEvents>
@@ -56,7 +56,7 @@ MongoDbAppender is again a simple modification of an idea and code available on 
 		<configuration debug="true">
 
 			<appender name="MONGODB"
-				class="net.exacode.logback.ext.mongodb.MongoDbAppender">
+				class="net.exacode.logback.classic.mongodb.MongoDbAppender">
 				<host>localhost</host>
 				<port>27017</port>
 				<dbName>logsdb</dbName>
@@ -76,7 +76,7 @@ Maven dependency
 In order to use this library add [repository](http://github.com/exacode/mvn-repo) location into your `pom.xml` and add appropriate dependency.
 
 		<dependency>
-			<groupId>net.exacode.logback.ext</groupId>
+			<groupId>net.exacode.logback.classic</groupId>
 			<artifactId>logback-extensions</artifactId>
 			<version>${version.spring-logging}</version>
 		</dependency>

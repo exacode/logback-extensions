@@ -1,4 +1,4 @@
-package net.exacode.logback.ext.mongodb.converter;
+package net.exacode.logback.classic.mongodb.converter;
 
 import ch.qos.logback.classic.spi.IThrowableProxy;
 import ch.qos.logback.classic.spi.StackTraceElementProxy;

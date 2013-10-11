@@ -1,4 +1,4 @@
-package net.exacode.logback.ext.recording;
+package net.exacode.logback.classic.recording;
 
 import static org.fest.assertions.Assertions.assertThat;
 

@@ -1,4 +1,4 @@
-package net.exacode.logback.ext.mongodb.converter;
+package net.exacode.logback.classic.mongodb.converter;
 
 import com.mongodb.BasicDBList;
 import com.mongodb.BasicDBObject;

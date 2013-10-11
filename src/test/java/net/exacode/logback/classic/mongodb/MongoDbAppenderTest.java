@@ -1,4 +1,4 @@
-package net.exacode.logback.ext.mongodb;
+package net.exacode.logback.classic.mongodb;
 
 import static org.fest.assertions.Assertions.assertThat;
 import static org.fest.assertions.MapAssert.entry;
@@ -9,7 +9,8 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 
-import net.exacode.logback.ext.category.MongoDbTests;
+import net.exacode.logback.classic.category.MongoDbTests;
+import net.exacode.logback.classic.mongodb.MongoDbAppender;
 
 import org.junit.After;
 import org.junit.Rule;

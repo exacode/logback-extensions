@@ -1,8 +1,8 @@
-package net.exacode.logback.ext.mongodb;
+package net.exacode.logback.classic.mongodb;
 
 import java.net.UnknownHostException;
 
-import net.exacode.logback.ext.mongodb.converter.LoggingEventConverter;
+import net.exacode.logback.classic.mongodb.converter.LoggingEventConverter;
 import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.UnsynchronizedAppenderBase;
 

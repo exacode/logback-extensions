@@ -1,4 +1,4 @@
-package net.exacode.logback.ext.recording;
+package net.exacode.logback.classic.recording;
 
 import java.util.Date;
 import java.util.Iterator;

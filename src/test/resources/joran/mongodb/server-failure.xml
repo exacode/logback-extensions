@@ -2,7 +2,7 @@
 <configuration debug="true">
 
 	<appender name="MONGODB"
-		class="net.exacode.logback.ext.mongodb.MongoDbAppender">
+		class="net.exacode.logback.classic.mongodb.MongoDbAppender">
 		<host>${mongodb.host-incorrect}</host>
 	</appender>
 

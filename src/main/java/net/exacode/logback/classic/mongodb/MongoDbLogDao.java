@@ -1,9 +1,9 @@
-package net.exacode.logback.ext.mongodb;
+package net.exacode.logback.classic.mongodb;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import net.exacode.logback.ext.mongodb.converter.LoggingEventConverter;
+import net.exacode.logback.classic.mongodb.converter.LoggingEventConverter;
 import ch.qos.logback.classic.spi.ILoggingEvent;
 
 import com.mongodb.BasicDBObject;

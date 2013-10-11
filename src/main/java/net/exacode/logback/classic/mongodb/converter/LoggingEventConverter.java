@@ -1,4 +1,4 @@
-package net.exacode.logback.ext.mongodb.converter;
+package net.exacode.logback.classic.mongodb.converter;
 
 import java.util.Date;
 import java.util.HashMap;

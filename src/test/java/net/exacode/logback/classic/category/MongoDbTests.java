@@ -1,4 +1,4 @@
-package net.exacode.logback.ext.category;
+package net.exacode.logback.classic.category;
 
 import org.junit.experimental.categories.Category;
 

@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>net.exacode.logback.ext</groupId>
+	<groupId>net.exacode.logback</groupId>
 	<artifactId>logback-extensions</artifactId>
 	<packaging>jar</packaging>
 	<name>Logback Extensions</name>
@@ -37,7 +37,7 @@
 		<mongodb.port-incorrect>28017</mongodb.port-incorrect>
 
 		<!-- Test groups -->
-		<test.integration.groups>net.exacode.logback.ext.category.MongoDbTests</test.integration.groups>
+		<test.integration.groups>net.exacode.logback.classic.category.MongoDbTests</test.integration.groups>
 	</properties>
 
 	<dependencies>
