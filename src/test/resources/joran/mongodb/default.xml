@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration debug="true">
+
+	<appender name="MONGODB"
+		class="net.exacode.logback.ext.mongodb.MongoDbAppender">
+		<host>${mongodb.host}</host>
+		<port>${mongodb.port}</port>
+		<dbName>${mongodb.db}</dbName>
+		<w>1</w>
+	</appender>
+
+	<root level="DEBUG">
+		<appender-ref ref="MONGODB" />
+	</root>
+
+</configuration>

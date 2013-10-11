@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration debug="true">
+	<!-- All Parameters com from MongoDB API -->
+	<!-- See: http://api.mongodb.org/java/current/com/mongodb/WriteConcern.html -->
+	<!-- See: http://api.mongodb.org/java/current/com/mongodb/MongoClientOptions.Builder.html -->
+	<appender name="MONGODB"
+		class="net.exacode.logback.ext.mongodb.MongoDbAppender">
+		<host>${mongodb.host}</host><!-- default: localhost -->
+		<port>${mongodb.port}</port><!-- default: 27017 -->
+		<dbName>${mongodb.db}</dbName><!-- default: logdb -->
+		<collectionName>logs</collectionName>
+		<username></username>
+		<password></password>
+		<connectionsPerHost>10</connectionsPerHost>
+		<threadsAllowedToBlockForConnectionMultiplier>5
+		</threadsAllowedToBlockForConnectionMultiplier>
+		<maxWaitTime>120000</maxWaitTime>
+		<connectTimeout>0</connectTimeout>
+		<socketTimeout>0</socketTimeout>
+		<autoConnectRetry>false</autoConnectRetry>
+		<includeCallerData>false</includeCallerData>
+		<w>1</w>
+		<wtimeout>0</wtimeout>
+		<j>false</j>
+		<fsync>false</fsync>
+		<capped>true</capped><!-- Use capped collections -->
+		<cappedSize>1048576</cappedSize><!-- 1MB -->
+	</appender>
+
+	<root level="DEBUG">
+		<appender-ref ref="MONGODB" />
+	</root>
+
+</configuration>

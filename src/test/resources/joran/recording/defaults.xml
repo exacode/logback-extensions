@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+	<appender name="LIST" class="ch.qos.logback.core.read.ListAppender" />
+
+	<appender name="REC" class="net.exacode.logback.ext.recording.RecordingAppender">
+		<appender-ref ref="LIST" />
+	</appender>
+
+	<logger name="LIST_LOG">
+		<appender-ref ref="LIST" />
+	</logger>
+
+	<root level="DEBUG">
+		<appender-ref ref="REC" />
+	</root>
+</configuration>

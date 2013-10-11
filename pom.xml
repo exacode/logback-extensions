@@ -1,0 +1,108 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>net.exacode.logback.ext</groupId>
+	<artifactId>logback-extensions</artifactId>
+	<packaging>jar</packaging>
+	<name>Logback Extensions</name>
+	<version>1.0.0-SNAPSHOT</version>
+
+	<distributionManagement>
+		<repository>
+			<id>exacode-releases</id>
+			<url>https://github.com/exacode/mvn-repo/raw/master/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>exacode-snapshots</id>
+			<url>https://github.com/exacode/mvn-repo/raw/master/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement> 
+
+	<scm>
+		<connection>scm:git:git@github.com:exacode/logback-extensions.git</connection>
+		<developerConnection>scm:git:git@github.com:exacode/logback-extensions.git</developerConnection>
+		<url>http://github.com/exacode/logback-extensions</url>
+	</scm>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
+
+		<!-- MongoDB parameters -->
+		<mongodb.host>localhost</mongodb.host>
+		<mongodb.port>27017</mongodb.port>
+		<mongodb.db>logdb</mongodb.db>
+		<mongodb.host-incorrect>localhostXXX</mongodb.host-incorrect>
+		<mongodb.port-incorrect>28017</mongodb.port-incorrect>
+
+		<!-- Test groups -->
+		<test.integration.groups>net.exacode.logback.ext.category.MongoDbTests</test.integration.groups>
+	</properties>
+
+	<dependencies>
+		<!-- Test dependencies -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- Fluent assertions -->
+		<dependency>
+			<groupId>org.easytesting</groupId>
+			<artifactId>fest-assert</artifactId>
+			<version>1.4</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- Logging dependencies -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+		<!-- MongoDB java driver -->
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+			<version>2.11.3</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<testResources>
+			<testResource>
+				<directory>src/test/resources</directory>
+				<filtering>true</filtering>
+			</testResource>
+		</testResources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.13</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.surefire</groupId>
+						<artifactId>surefire-junit47</artifactId>
+						<version>2.13</version>
+					</dependency>
+				</dependencies>
+				<executions>
+					<execution>
+						<id>integration-tests</id>
+						<phase>integration-test</phase>
+						<goals>
+							<goal>test</goal>
+						</goals>
+						<configuration>
+							<groups>${test.integration.groups}</groups>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
+
