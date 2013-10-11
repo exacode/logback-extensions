@@ -11,7 +11,7 @@ Configuration consists of:
 - number of logs that will be kept in the memory (buffer) unless they are dumpped or removed
 - when logs kept in the buffer should be removed (without dump)
 
-See full [RecordingAppender Configuration](/logback-extensions/src/test/resources/joran/recording/all-params.xml).
+See full [RecordingAppender Configuration](/src/test/resources/joran/recording/all-params.xml).
 
 **Example configuration - logback.xml**
 
@@ -42,7 +42,7 @@ MongoDbAppender
 ---------------
 MongoDbAppender allows you to dump logs to MongoDB collection. By default this appender uses [capped collections](http://docs.mongodb.org/manual/core/capped-collections/) (that works like circular buffer). Moreover this jar provides also a `MongoDbLogDao` that is an easy way of retrieving logs from MongoDB.
 
-See full [MongoDbAppender Configuration](/logback-extensions/src/test/resources/joran/mongodb/all-params.xml).
+See full [MongoDbAppender Configuration](/src/test/resources/joran/mongodb/all-params.xml).
 
 MongoDbAppender is again a simple modification of an idea and code available on great (really!) blog post [Tomasz Nurkiewicz - MongoDB and recording appenders for Logback](http://nurkiewicz.blogspot.com/2011/04/mongodb-and-recording-appenders-for.html). My changes:
 * Changed deprecated API invocations
